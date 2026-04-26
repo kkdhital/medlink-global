@@ -1,0 +1,2748 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///Users/kdhital/Downloads/medilink_v4%20(6).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLink v4 - Ethical Global Healthcare Placement</title>
+    <style>
+        :root {
+            --primary: #208d9d;
+            --primary-dark: #1a7580;
+            --primary-light: #32b8c6;
+            --success: #20a655;
+            --warning: #ff9800;
+            --danger: #c01530;
+            --light-bg: #f5f5f5;
+            --surface: #ffffff;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --border: #e0e0e0;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --light-bg: #1e1e1e;
+                --surface: #2a2a2a;
+                --text-primary: #f5f5f5;
+                --text-secondary: #aaaaaa;
+                --border: #444444;
+                --shadow: rgba(0,0,0,0.3);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .user-info {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .user-badge {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Page header with description */
+        .page-header {
+            margin-bottom: 24px;
+            display: none;
+        }
+
+        .page-header.active {
+            display: block;
+        }
+
+        .page-header h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .page-header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Navigation tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            color: var(--primary);
+        }
+
+        .nav-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .card-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        /* Form elements */
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: var(--surface);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(32, 141, 157, 0.1);
+        }
+
+        /* Checkbox styling */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .checkbox-wrapper label {
+            margin: 0;
+            display: inline;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: var(--light-bg);
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 13px;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        /* Grid layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Destination cards */
+        .destination-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .destination-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .destination-card.selected {
+            border-color: var(--primary);
+            background: rgba(32, 141, 157, 0.05);
+        }
+
+        .destination-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .destination-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .destination-stat:last-child {
+            border-bottom: none;
+        }
+
+        /* Match score */
+        .match-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--success);
+        }
+
+        .score-bar {
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+
+        .score-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        /* Document checklist */
+        .doc-item {
+            display: grid;
+            grid-template-columns: 30px 1fr 100px 80px;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+
+        .doc-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .doc-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .status-requested {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status-uploaded {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .status-verified {
+            background: #e8f5e9;
+            color: var(--success);
+        }
+
+        .status-rejected {
+            background: #ffebee;
+            color: var(--danger);
+        }
+
+        /* Priority ranking */
+        .priority-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            background: var(--light-bg);
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: move;
+            border-left: 4px solid var(--primary);
+        }
+
+        .priority-drag {
+            cursor: grab;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .priority-drag:active {
+            cursor: grabbing;
+        }
+
+        /* Progress indicator */
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Quality gateway */
+        .gateway-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px;
+            background: var(--light-bg);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--border);
+        }
+
+        .gateway-step.completed {
+            border-left-color: var(--success);
+            background: rgba(32, 166, 85, 0.05);
+        }
+
+        .gateway-step.pending {
+            border-left-color: var(--warning);
+            background: rgba(255, 152, 0, 0.05);
+        }
+
+        .gateway-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: var(--light-bg);
+        }
+
+        .gateway-step.completed .gateway-icon {
+            background: var(--success);
+            color: white;
+        }
+
+        .gateway-step.pending .gateway-icon {
+            background: var(--warning);
+            color: white;
+        }
+
+        /* Test interface */
+        .question-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .question-header {
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .question-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .question-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .question-option:hover {
+            background: var(--light-bg);
+        }
+
+        .question-option input[type="radio"] {
+            width: auto;
+            margin: 0;
+        }
+
+        /* Statistics */
+        .stat-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 24px;
+        }
+
+        /* Ethics section */
+        .ethics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .ethics-item {
+            background: var(--surface);
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 6px;
+        }
+
+        .ethics-item h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        /* Employer view */
+        .candidate-pool-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .candidate-info {
+            flex: 1;
+        }
+
+        .candidate-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .candidate-meta {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .badge-verified {
+            background: rgba(32, 166, 85, 0.1);
+            color: var(--success);
+        }
+
+        .badge-interview {
+            background: rgba(32, 141, 157, 0.1);
+            color: var(--primary);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            border-left: 4px solid;
+        }
+
+        .alert-success {
+            background: rgba(32, 166, 85, 0.1);
+            color: var(--success);
+            border-left-color: var(--success);
+        }
+
+        .alert-warning {
+            background: rgba(255, 152, 0, 0.1);
+            color: var(--warning);
+            border-left-color: var(--warning);
+        }
+
+        .alert-info {
+            background: rgba(32, 141, 157, 0.1);
+            color: var(--primary);
+            border-left-color: var(--primary);
+        }
+
+        /* Button group */
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+
+            .nav-tabs {
+                gap: 4px;
+            }
+
+            .nav-tab {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .doc-item {
+                grid-template-columns: 30px 1fr 80px;
+            }
+
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-container">
+            <div class="logo">🏥 MediLink v4</div>
+            <div class="user-info">
+                <span id="userStatus">Not logged in</span>
+                <button class="btn btn-small btn-secondary" onclick="simulateLogin()">Login / Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <div id="heroSection" class="hero" style="display: block;">
+            <h1>Ethical Global Healthcare Placement</h1>
+            <p>Zero-burden migration backed by hospitals. We earn through partnerships, not by charging you.</p>
+            <button class="btn btn-primary" style="background: white; color: var(--primary);" onclick="startAssessment()">
+                Start Free Assessment
+            </button>
+        </div>
+
+        <!-- Dynamic Page Headers (replaces hero on non-assessment pages) -->
+        <div id="pageHeader" class="page-header" style="display: none;"><h2>👔 Employer Portal (Read-Only Demo)</h2><p>Step 10 of 10 - How hospitals view verified candidates</p></div>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="switchTab(&#39;assessment&#39;)">1. Assessment</button>
+            <button class="nav-tab" onclick="switchTab(&#39;destinations&#39;)">2. Destinations</button>
+            <button class="nav-tab" onclick="switchTab(&#39;case&#39;)">3. My Case</button>
+            <button class="nav-tab" onclick="switchTab(&#39;documents&#39;)">4. Documents</button>
+            <button class="nav-tab" onclick="switchTab(&#39;test&#39;)">5. Test</button>
+            <button class="nav-tab" onclick="switchTab(&#39;interview&#39;)">6. Interview</button>
+            <button class="nav-tab" onclick="switchTab(&#39;gateway&#39;)">7. Quality Gate</button>
+            <button class="nav-tab" onclick="switchTab(&#39;matching&#39;)">8. Matching</button>
+            <button class="nav-tab" onclick="switchTab(&#39;family&#39;)">9. Family</button>
+            <button class="nav-tab" onclick="switchTab(&#39;employer&#39;)">10. Employer View</button>
+        </div>
+
+        <!-- TAB 1: ASSESSMENT -->
+        <div id="assessment" class="tab-content active">
+            <div class="card">
+                <div class="card-header">📋 Professional Profile Assessment</div>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Step 1 of 10 | Complete your profile to get personalized destination recommendations</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" placeholder="Your full name" value="Dr. Priya Sharma">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" value="priya@example.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Current Location</label>
+                    <input type="text" id="location" value="India">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label>Profession *</label>
+                        <select id="profession" onchange="updateProfessionFields()">
+                            <option value="">Select profession</option>
+                            <option value="nurse">Registered Nurse (RN)</option>
+                            <option value="doctor">Medical Doctor (MD)</option>
+                            <option value="allied">Allied Healthcare Professional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Post-Specialty Training? *</label>
+                        <select id="postSpecialty" onchange="updateSpecialtyField()">
+                            <option value="">Select...</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="specialtyField" class="form-group" style="display: none;">
+                    <label>Please Specify Specialty *</label>
+                    <input type="text" id="specialty" placeholder="e.g., Cardiology, Pulmonology, Emergency Medicine" value="Critical Care / ICU">
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label>Years of Clinical Experience (Post MBBS/Nursing Degree) *</label>
+                        <input type="number" id="experience" value="8" min="0" max="60">
+                    </div>
+
+                    <div class="form-group">
+                        <label>English Proficiency *</label>
+                        <select id="englishTest">
+                            <option value="">Select test...</option>
+                            <option value="native">Native / Fluent</option>
+                            <option value="ielts">IELTS</option>
+                            <option value="oet">OET</option>
+                            <option value="toefl">TOEFL</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="englishScoreLabel">Score / Band *</label>
+                        <input type="text" id="englishScore" placeholder="e.g., 7.0 or B+" value="Advanced">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="form-group">
+                        <label>Family Status *</label>
+                        <select id="family" class="active">
+                            <option value="">Select...</option>
+                            <option value="single">Single</option>
+                            <option value="married-no-kids">Married, No Children</option>
+                            <option value="married-kids">Married with Children</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>When do you plan to migrate? *</label>
+                        <select id="migrationTimeline">
+                            <option value="">Select timeline</option>
+                            <option value="3m">Within 3 months</option>
+                            <option value="6m">3-6 months</option>
+                            <option value="12m">6-12 months</option>
+                            <option value="flex">12+ months / Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>What matters most? (Drag to reorder - all 5 items are selected)</label>
+                    <div id="priorityList" style="border: 1px solid var(--border); padding: 12px; border-radius: 6px;">
+                        <div class="priority-item" draggable="true">
+                            <span class="priority-drag">⋮⋮</span>
+                            <span>⚡ Speed to First Paycheck</span>
+                        </div>
+                        <div class="priority-item" draggable="true">
+                            <span class="priority-drag">⋮⋮</span>
+                            <span>💰 Salary &amp; Financial Security</span>
+                        </div>
+                        <div class="priority-item" draggable="true">
+                            <span class="priority-drag">⋮⋮</span>
+                            <span>👨‍👩‍👧 Family &amp; Children Support</span>
+                        </div>
+                        <div class="priority-item" draggable="true">
+                            <span class="priority-drag">⋮⋮</span>
+                            <span>📚 Language &amp; Learning Curve</span>
+                        </div>
+                        <div class="priority-item" draggable="true">
+                            <span class="priority-drag">⋮⋮</span>
+                            <span>🏅 PR &amp; Permanent Residency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" onclick="validateAndProceed()">
+                    Analyze &amp; Get Recommendations →
+                </button>
+            </div>
+        </div>
+
+        <!-- TAB 2: DESTINATIONS -->
+        <div id="destinations" class="tab-content">
+            <div class="card">
+                <div class="card-header">🌍 Recommended Destinations</div>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Step 2 of 10 | Choose your top 3 destinations to match with hospitals and employers</p>
+
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <strong style="color: var(--primary);">Select your top 3 destinations</strong>
+                    <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;"><strong id="destCount">Selected: 3/3</strong> | Based on your profile, click destination cards to select</p>
+                </div>
+
+                <div class="grid" id="destinationGrid"><div class="destination-card selected" data-destination="USA">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇺🇸 USA</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="USA" checked="" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">95% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 95%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>$65,000-75,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>$25,000-35,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>3-5 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>NCLEX-RN</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>6-9 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>State Nursing Board</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Excellent</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Moderate</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">NCLEX seat availability</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;USA&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="UK">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇬🇧 UK</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="UK" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">88% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 88%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>£28,000-32,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>£18,000-24,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>5-10 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>NMC Assessment + OSCE</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>4-8 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>Nursing &amp; Midwifery Council</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Very Good</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Moderate-High</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">OSCE centre capacity</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;UK&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card selected" data-destination="Australia">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇦🇺 Australia</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="Australia" checked="" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">92% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 92%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>AUD $65,000-75,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>AUD $28,000-38,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>3-4 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>AHPRA Assessment</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>3-6 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>AHPRA</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Excellent</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Straightforward</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">None (high demand)</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;Australia&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card selected" data-destination="Canada">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇨🇦 Canada</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="Canada" checked="" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">85% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>CAD $60,000-70,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>CAD $25,000-35,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>2-3 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>Provincial CNPU</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>6-10 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>Provincial Nursing Colleges</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Exceptional</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Moderate</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">None (fast track)</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;Canada&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="New Zealand">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇳🇿 New Zealand</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="New Zealand" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">90% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 90%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>NZD $60,000-70,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>NZD $25,000-32,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>2-3 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>NZNO/HPCA</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>4-6 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>HPRA</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Exceptional</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Straightforward</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">None (fast)</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;New Zealand&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="Singapore">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇸🇬 Singapore</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="Singapore" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">87% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 87%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>SGD $55,000-70,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>SGD $24,000-32,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>3-5 years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>Singapore Nursing Board</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>2-4 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>Ministry of Health</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Very Good</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Moderate</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">None (fastest)</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;Singapore&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="UAE">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇦🇪 UAE</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="UAE" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">83% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 83%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>AED 120,000-150,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>AED 30,000-40,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>Long-term residency</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>MOH License</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>3-5 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>UAE Ministry of Health</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Good</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ Moderate</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">License verification</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;UAE&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="Germany">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇩🇪 Germany</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="Germany" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">80% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 80%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>€45,000-55,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>€20,000-28,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>3 years + EU path</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>Approbation</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>8-12 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>Bundesfachkammer</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Good</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ High (language)</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">German language requirement</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;Germany&#39;); return false;">💬 Language Learning Info</button>
+                    </div><div class="destination-card " data-destination="Italy">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">🇮🇹 Italy</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="Italy" style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">78% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: 78%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>€35,000-45,000/year</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>€18,000-26,000</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>5+ years</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>Italian License</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>6-10 months</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>Italian Nursing Board</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ Good</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ High (language)</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">Italian language test</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator(&#39;Italy&#39;); return false;">💬 Language Learning Info</button>
+                    </div></div>
+
+                <div style="margin-top: 24px; text-align: center;">
+                    <button class="btn btn-secondary" onclick="showAgencyComparison()">
+                        📊 Compare: Traditional Agency vs MediLink
+                    </button>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;assessment&#39;)">
+                        ← Back to Assessment
+                    </button>
+                    <button class="btn btn-primary btn-block" id="destNextBtn" onclick="proceedWithSelectedDestinations(); switchTab(&#39;case&#39;);" title="Ready to proceed">
+                        Continue to Case Setup →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: MY CASE -->
+        <div id="case" class="tab-content">
+            <div class="card">
+                <div class="card-header">📁 My Migration Case</div>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Step 3 of 10 | Review your selections and activate your case</p>
+
+                <div class="alert alert-info">
+                    <strong>✓ Assessment Complete</strong> | Your profile matches your selected destinations.
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>Selected Destinations (for case)</label>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;" id="caseDestinationBadges">
+                        <span class="badge badge-verified">USA</span>
+                        <span class="badge badge-verified">Australia</span>
+                        <span class="badge badge-verified">Canada</span>
+                    </div>
+                </div>
+
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="margin-bottom: 12px;">📊 Cost Transparency</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div>
+                            <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Paid by Hospital/Employer</div>
+                            <div style="font-size: 20px; font-weight: 700; color: var(--success);">₹0 (Your cost)</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Placement Bond (Refundable)</div>
+                            <div style="font-size: 20px; font-weight: 700; color: var(--primary);">₹5,000</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">
+                        ℹ️ The ₹5,000 bond is <strong>fully refunded</strong> when you're placed or after 12 months of support.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address (for case communication)</label>
+                    <input type="email" id="caseEmail" placeholder="your.email@example.com" value="" style="background-color: var(--light-bg);" readonly="">
+                    <p style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">Pre-filled from your assessment. Contact support to change.</p>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="tcCheckbox">
+                    <label for="tcCheckbox">I agree to the <a href="file:///Users/kdhital/Downloads/medilink_v4%20(6).html#" onclick="showTermsModal(); return false;" style="color: var(--primary); text-decoration: underline;">Terms &amp; Conditions</a> and ethical recruitment policy</label>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="downloadReport()">
+                        📥 Download Full Report
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="paymentFlow()">
+                        💳 Activate Case (₹5,000 Bond)
+                    </button>
+                </div>
+
+                <p style="font-size: 12px; color: var(--text-secondary); margin-top: 12px;">
+                    After payment, your case opens and you can upload documents for verification.
+                </p>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;destinations&#39;)">
+                        ← Back to Destinations
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;documents&#39;)">
+                        Continue to Documents →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ethics section -->
+            <div class="card" style="margin-top: 20px;">
+                <div class="card-header">⚖️ Ethical Recruitment Commitment</div>
+                <div class="ethics-grid">
+                    <div class="ethics-item">
+                        <h4>✓ Zero Worker Fees</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">All recruitment costs covered by hospitals.</p>
+                    </div>
+                    <div class="ethics-item">
+                        <h4>✓ No Debt Bondage</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">No salary deductions for placement.</p>
+                    </div>
+                    <div class="ethics-item">
+                        <h4>✓ Fair Contracts</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">Contract reviewed for exploitation clauses.</p>
+                    </div>
+                    <div class="ethics-item">
+                        <h4>✓ Audit Trail</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">Every step verified and documented.</p>
+                    </div>
+                    <div class="ethics-item">
+                        <h4>✓ Grievance Route</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">24/7 support channel for disputes.</p>
+                    </div>
+                    <div class="ethics-item">
+                        <h4>✓ WHO Compliant</h4>
+                        <p style="font-size: 14px; color: var(--text-secondary);">Follows WHO Global Code standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: DOCUMENTS -->
+        <div id="documents" class="tab-content">
+            <div class="card">
+                <div class="card-header">📋 Document Vault &amp; Verification</div>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Step 4 of 10 | Upload profession and destination-specific documents</p>
+
+                <div class="alert alert-info">
+                    Case must be activated (bond paid) to upload documents. Status: <strong>Pending activation</strong>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label>Profession</label>
+                        <select id="docProfession" onchange="updateDocumentChecklist()">
+                            <option value="nurse">Registered Nurse (RN)</option>
+                            <option value="doctor">Medical Doctor (MD)</option>
+                            <option value="allied">Allied Healthcare</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Destination (from your selection)</label>
+                        <select id="docDestination" onchange="updateDocumentChecklist()">
+                            <!-- Populated dynamically from selected destinations -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-text">
+                        <span>Document Completion</span>
+                        <span id="docProgress">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="docProgressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 24px; margin-bottom: 12px;">Required Documents (for selected pathway)</h4>
+                <div id="docChecklist"><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Passport</strong> - Valid travel document</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Professional License</strong> - Current registration</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Degree Certificates</strong> - Qualification credentials</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Experience/Recommendation Letters</strong> - From employers</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Language Test Results (IELTS/TOEFL/OET)</strong> - As applicable</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Curriculum Vitae</strong> - Professional CV</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div><div class="doc-item">
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>Statement of Purpose</strong> - Career goals (500-1000 words)</span>
+                    <span class="doc-status status-requested">Requested</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                </div></div>
+
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px;">
+                    ✓ Status key: Requested = waiting for upload | Uploaded = under review | Verified = approved for hospitals
+                </p>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;case&#39;)">
+                        ← Back to My Case
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;test&#39;)">
+                        Continue to Test →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 5: TEST -->
+        <div id="test" class="tab-content">
+            <div class="card">
+                <div class="card-header">📝 MediLink Professional Test</div>
+
+                <div class="alert alert-info">
+                    You'll answer 20 questions across two sections (10 minutes per section). Pass threshold: 70%
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 16px;">Part A: Core Professional Knowledge</h4>
+
+                <div class="question-container">
+                    <div class="question-header">Question 1 of 10 (Part A)</div>
+                    <p style="margin-bottom: 12px;">Which of the following is the priority intervention for a patient presenting with acute dyspnea?</p>
+                    <div class="question-options">
+                        <label class="question-option">
+                            <input type="radio" name="q1"> Assess airway, breathing, and circulation
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q1"> Administer oxygen immediately
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q1"> Place patient in supine position
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q1"> Call physician
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-header">Question 2 of 10 (Part A)</div>
+                    <p style="margin-bottom: 12px;">When administering IV medications, the most critical safety check is:</p>
+                    <div class="question-options">
+                        <label class="question-option">
+                            <input type="radio" name="q2"> The patient's blood pressure reading
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q2"> Verifying the "5 rights" (right patient, drug, dose, time, route)
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q2"> The medication's manufacturing date
+                        </label>
+                        <label class="question-option">
+                            <input type="radio" name="q2"> The nurse's experience level
+                        </label>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning" style="margin-top: 16px;">
+                    ℹ️ This is a demo. In production, test would be full 20 questions with randomization and timer.
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;documents&#39;)">
+                        ← Back to Documents
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="submitTest()">
+                        Submit Test Answers &amp; View Results →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 6: INTERVIEW -->
+        <div id="interview" class="tab-content">
+            <div class="card">
+                <div class="card-header">🎤 Structured Interview</div>
+
+                <div class="alert alert-success">
+                    ✓ Interview completed on Jan 20, 2026. Interviewer: Dr. Sarah Chen (HR Manager, MediLink)
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">Interview Rubric &amp; Scores</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                    <div style="display: grid; grid-template-columns: 1fr 100px 100px; gap: 12px; align-items: center; margin-bottom: 12px; padding: 12px; background: var(--surface); border-radius: 6px; border: 1px solid var(--border);">
+                        <span><strong>Communication &amp; Clarity</strong></span>
+                        <div style="text-align: center;">
+                            <div style="font-size: 18px; font-weight: 700; color: var(--primary);">4.5 / 5</div>
+                        </div>
+                        <div style="background: var(--primary); height: 8px; border-radius: 4px; position: relative; overflow: hidden;">
+                            <div style="height: 100%; width: 90%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 100px 100px; gap: 12px; align-items: center; margin-bottom: 12px; padding: 12px; background: var(--surface); border-radius: 6px; border: 1px solid var(--border);">
+                        <span><strong>Clinical Reasoning</strong></span>
+                        <div style="text-align: center;">
+                            <div style="font-size: 18px; font-weight: 700; color: var(--primary);">4.0 / 5</div>
+                        </div>
+                        <div style="background: var(--primary); height: 8px; border-radius: 4px; position: relative; overflow: hidden;">
+                            <div style="height: 100%; width: 80%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 100px 100px; gap: 12px; align-items: center; margin-bottom: 12px; padding: 12px; background: var(--surface); border-radius: 6px; border: 1px solid var(--border);">
+                        <span><strong>Professionalism</strong></span>
+                        <div style="text-align: center;">
+                            <div style="font-size: 18px; font-weight: 700; color: var(--primary);">4.8 / 5</div>
+                        </div>
+                        <div style="background: var(--primary); height: 8px; border-radius: 4px; position: relative; overflow: hidden;">
+                            <div style="height: 100%; width: 96%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 100px 100px; gap: 12px; align-items: center; margin-bottom: 0; padding: 12px; background: var(--surface); border-radius: 6px; border: 1px solid var(--border);">
+                        <span><strong>Adaptability &amp; Teamwork</strong></span>
+                        <div style="text-align: center;">
+                            <div style="font-size: 18px; font-weight: 700; color: var(--primary);">4.3 / 5</div>
+                        </div>
+                        <div style="background: var(--primary); height: 8px; border-radius: 4px; position: relative; overflow: hidden;">
+                            <div style="height: 100%; width: 86%; background: var(--primary);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">Overall Assessment</h4>
+                <div style="background: rgba(32, 166, 85, 0.1); border-left: 4px solid var(--success); padding: 16px; border-radius: 6px;">
+                    <div style="font-weight: 600; color: var(--success); margin-bottom: 8px;">✓ EXCELLENT CANDIDATE PROFILE</div>
+                    <p style="font-size: 14px; color: var(--text-secondary);">
+                        Priya demonstrates strong clinical knowledge, excellent communication skills, and high professionalism. 
+                        Well-prepared for healthcare environment. No red flags identified. Recommended for shortlisting.
+                    </p>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;test&#39;)">
+                        ← Back to Test
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;gateway&#39;)">
+                        Continue to Quality Gate →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 7: QUALITY GATEWAY -->
+        <div id="gateway" class="tab-content">
+            <div class="card">
+                <div class="card-header">🎯 MediLink Quality Gateway</div>
+
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    Complete all 3 steps to become <strong>"MediLink Verified"</strong> and visible to hospitals.
+                </p>
+
+                <h4 style="margin-bottom: 16px;">Step 1: Document Verification</h4>
+                <div class="gateway-step completed">
+                    <div class="gateway-icon">✓</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600;">Identity, Qualification, Registration Verified</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Completed on Jan 15, 2026</div>
+                    </div>
+                    <button class="btn btn-small btn-secondary">View Details</button>
+                </div>
+
+                <h4 style="margin: 24px 0 16px 0;">Step 2: Professional Test</h4>
+                <div class="gateway-step completed">
+                    <div class="gateway-icon">✓</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600;">2-Part Professional Test (20 questions)</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Completed on Jan 22, 2026 | Score: 82%</div>
+                    </div>
+                    <button class="btn btn-small btn-secondary">View Results</button>
+                </div>
+
+                <h4 style="margin: 24px 0 16px 0;">Step 3: Structured Interview</h4>
+                <div class="gateway-step completed">
+                    <div class="gateway-icon">✓</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600;">Interview Assessment (30 mins, recorded)</div>
+                        <div style="font-size: 13px; color: var(--text-secondary);">Completed on Jan 20, 2026 | Overall Score: 4.4/5</div>
+                    </div>
+                    <button class="btn btn-small btn-secondary">View Feedback</button>
+                </div>
+
+                <div class="card" style="background: rgba(32, 166, 85, 0.05); margin-top: 24px;">
+                    <h4 style="color: var(--success); margin-bottom: 12px;">✓ VERIFICATION COMPLETE - YOU'RE MEDILINK VERIFIED!</h4>
+                    <ul style="color: var(--text-secondary); padding-left: 20px;">
+                        <li>All credentials verified and validated</li>
+                        <li>Professional competency confirmed</li>
+                        <li>Ready for hospital matching</li>
+                        <li>Your profile visible to employers</li>
+                    </ul>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;interview&#39;)">
+                        ← Back to Interview
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;matching&#39;)">
+                        Continue to Hospital Matching →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 8: MATCHING -->
+        <div id="matching" class="tab-content">
+            <div class="card">
+                <div class="card-header">🏥 Hospital Matching &amp; Employer Interviews</div>
+
+                <div class="alert alert-success">
+                    ✓ You are now MediLink Verified! Visible to hospitals.
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">Your Profile Visibility</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                        <div class="stat-box">
+                            <div class="stat-number">42</div>
+                            <div class="stat-label">Hospitals viewing</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Shortlists</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Interview requests</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 12px;">Active Employer Matches</h4>
+
+                <div class="candidate-pool-card">
+                    <div class="candidate-info">
+                        <div class="candidate-name">🏥 Mount Sinai Medical Center (New York)</div>
+                        <div class="candidate-meta" style="margin-top: 8px;">
+                            <div><strong>Position:</strong> Registered Nurse (ICU)</div>
+                            <div><strong>Status:</strong> <span class="badge badge-interview">Interview Scheduled</span></div>
+                            <div><strong>Interview Date:</strong> Feb 5, 2026 @ 2:00 PM EST</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-small">View Details</button>
+                </div>
+
+                <div class="candidate-pool-card">
+                    <div class="candidate-info">
+                        <div class="candidate-name">🏥 Stanford Health (California)</div>
+                        <div class="candidate-meta" style="margin-top: 8px;">
+                            <div><strong>Position:</strong> Registered Nurse (Emergency)</div>
+                            <div><strong>Status:</strong> <span class="badge badge-verified">Shortlisted</span></div>
+                            <div><strong>Next Step:</strong> Awaiting interview invitation</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-small">Message HR</button>
+                </div>
+
+                <div class="candidate-pool-card">
+                    <div class="candidate-info">
+                        <div class="candidate-name">🏥 Cleveland Clinic (Ohio)</div>
+                        <div class="candidate-meta" style="margin-top: 8px;">
+                            <div><strong>Position:</strong> Registered Nurse (Medical-Surgical)</div>
+                            <div><strong>Status:</strong> Under Review</div>
+                            <div><strong>Your Fit Score:</strong> 89% Match</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary btn-small">View Offer Terms</button>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;gateway&#39;)">
+                        ← Back to Quality Gate
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;family&#39;)">
+                        Continue to Family Portal →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 9: FAMILY DASHBOARD -->
+        <div id="family" class="tab-content">
+            <div class="card">
+                <div class="card-header">👨‍👩‍👧 Family &amp; Settlement Support (FCSP)</div>
+                <p style="color: var(--text-secondary); margin-bottom: 16px;">Step 9 of 10 | Post-placement support for smooth relocation and family assurance</p>
+
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                    Optional post-placement support ensuring smooth relocation and retention.
+                </p>
+
+                <div class="alert alert-info">
+                    FCSP available as premium add-on ($50/month USD equivalent). Includes family dashboard, 
+                    settlement support, and retention monitoring.
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">📊 Milestone Tracker</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--success);">
+                        <span>✓ Document Upload &amp; Verification</span>
+                        <span class="badge badge-verified">Completed</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--success);">
+                        <span>✓ Interview Assessment</span>
+                        <span class="badge badge-verified">Completed Jan 20</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--success);">
+                        <span>✓ Professional Test</span>
+                        <span class="badge badge-verified">Completed Jan 22</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--warning);">
+                        <span>→ Job Offer Received</span>
+                        <span class="badge" style="background: rgba(255, 152, 0, 0.1); color: var(--warning);">In Progress</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #ccc;">
+                        <span>→ Visa Application Submitted</span>
+                        <span class="badge" style="background: #f0f0f0; color: #666;">Pending</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; background: var(--surface); border-radius: 6px; border-left: 4px solid #ccc;">
+                        <span>→ Ready for Arrival</span>
+                        <span class="badge" style="background: #f0f0f0; color: #666;">Pending</span>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">📬 Recent Messages from Support Team</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="background: var(--surface); padding: 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--primary);">
+                        <div style="font-weight: 600; color: var(--primary); margin-bottom: 4px;">Jan 22 - Visa Processing Update</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">Your visa application is on track. Expected approval by Feb 10, 2026. Settlement coordinator Jane Smith will contact you within 48 hours.</p>
+                    </div>
+                    <div style="background: var(--surface); padding: 12px; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid var(--primary);">
+                        <div style="font-weight: 600; color: var(--primary); margin-bottom: 4px;">Jan 20 - Settlement Coordinator Assigned</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">Welcome package has been sent to your email. Your assigned coordinator is Jane Smith (jane@medilink.com). She will help with accommodation, bank setup, and local orientation.</p>
+                    </div>
+                    <div style="background: var(--surface); padding: 12px; border-radius: 6px; border-left: 4px solid var(--primary);">
+                        <div style="font-weight: 600; color: var(--primary); margin-bottom: 4px;">Jan 15 - All Documents Verified ✓</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">Congratulations! All your documents have been verified and approved. You are now eligible for hospital matching and employer interviews.</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">⚠️ Emergency Contact &amp; Support</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: 600;">Primary Contact: MediLink 24/7 Support</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 4px 0;"><strong>Phone:</strong> +1-800-MEDILINK | <strong>Email:</strong> support@medilink.com | <strong>WhatsApp:</strong> +1-555-MEDILINK</p>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600;">Secondary: Your Settlement Coordinator</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 4px 0;"><strong>Name:</strong> Jane Smith | <strong>Email:</strong> jane@medilink.com | <strong>Phone:</strong> +1-650-SETTLE-1</p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">📋 Settlement Checklist (Pre-Departure)</h4>
+                <div>
+                    <div class="doc-item" style="grid-template-columns: 30px 1fr 150px;">
+                        <input type="checkbox" class="doc-checkbox" checked="">
+                        <span>Accommodation search &amp; booking</span>
+                        <span class="doc-status status-verified">Completed</span>
+                    </div>
+                    <div class="doc-item" style="grid-template-columns: 30px 1fr 150px;">
+                        <input type="checkbox" class="doc-checkbox" checked="">
+                        <span>Flight booking coordination</span>
+                        <span class="doc-status status-verified">Completed</span>
+                    </div>
+                    <div class="doc-item" style="grid-template-columns: 30px 1fr 150px;">
+                        <input type="checkbox" class="doc-checkbox">
+                        <span>Visa &amp; travel documentation</span>
+                        <span class="doc-status status-uploaded">In Progress</span>
+                    </div>
+                    <div class="doc-item" style="grid-template-columns: 30px 1fr 150px;">
+                        <input type="checkbox" class="doc-checkbox">
+                        <span>Bank account setup (destination)</span>
+                        <span class="doc-status status-requested">Pending</span>
+                    </div>
+                    <div class="doc-item" style="grid-template-columns: 30px 1fr 150px;">
+                        <input type="checkbox" class="doc-checkbox">
+                        <span>Social Security/Tax registration</span>
+                        <span class="doc-status status-requested">Pending</span>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 24px; margin-bottom: 12px;">Post-Arrival Support (First 90 Days)</h4>
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px;">
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Week 1: Arrival &amp; Onboarding</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">
+                            Airport pickup, accommodation check-in, SIM card &amp; transport setup, local orientation
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Week 2-4: Hospital Onboarding</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">
+                            Department orientation, training modules, buddy assignment, payroll setup
+                        </p>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 4px;">Month 2-3: Settling In</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">
+                            Permanent housing search, health insurance finalization, community connection, check-ins
+                        </p>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 24px; margin-bottom: 12px;">Family Consent &amp; Dashboard</h4>
+                <div class="form-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" checked="">
+                        <label>Allow family members to view milestone progress</label>
+                    </div>
+                    <p style="font-size: 12px; color: var(--text-secondary); margin-top: 8px;">
+                        Your family can see: visa status, arrival date, settlement progress, check-in confirmations
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Invite family member (email)</label>
+                    <input type="email" placeholder="family.member@example.com">
+                    <button class="btn btn-secondary btn-small" style="margin-top: 8px;">Send Invite</button>
+                </div>
+
+                <div class="alert alert-success" style="margin-top: 20px;">
+                    <strong>✓ FCSP drives retention</strong> — Early check-ins catch settlement issues before they become attrition risk.
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;matching&#39;)">
+                        ← Back to Matching
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="switchTab(&#39;employer&#39;)">
+                        Continue to Employer View →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 10: EMPLOYER VIEW -->
+        <div id="employer" class="tab-content">
+            <div class="card">
+                <div class="card-header">👔 Employer Portal (Read-Only Demo)</div>
+
+                <div class="alert alert-warning">
+                    This is a <strong>read-only demonstration</strong> of how hospitals view verified candidates.
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">Candidate: Priya Sharma, RN</h4>
+
+                <div style="background: var(--light-bg); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+                        <div class="stat-box">
+                            <div class="stat-number">✓</div>
+                            <div class="stat-label">Verified Badge</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">4.4</div>
+                            <div class="stat-label">Interview Score</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">82</div>
+                            <div class="stat-label">Test Score %</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Years Exp.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 12px;">Profile Summary (Hospital View)</h4>
+                <div class="card" style="background: var(--surface); border: 1px solid var(--border);">
+                    <div style="padding: 12px; border-bottom: 1px solid var(--border);">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Professional Background</div>
+                        <ul style="font-size: 13px; color: var(--text-secondary); padding-left: 20px; margin: 0;">
+                            <li>RN, 8 years experience (ICU, Emergency, Medical-Surgical)</li>
+                            <li>Advanced English proficiency</li>
+                            <li>Recent: Apollo Hospitals Delhi (2 years, ICU specialist)</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 12px; border-bottom: 1px solid var(--border);">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Verification Status</div>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="badge badge-verified">Identity ✓</span>
+                            <span class="badge badge-verified">License ✓</span>
+                            <span class="badge badge-verified">Experience ✓</span>
+                            <span class="badge badge-verified">Language ✓</span>
+                        </div>
+                    </div>
+                    <div style="padding: 12px; border-bottom: 1px solid var(--border);">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Interview Highlights</div>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">
+                            Excellent communication, strong clinical reasoning, high professionalism. 
+                            No red flags. Recommended for shortlisting.
+                        </p>
+                    </div>
+                    <div style="padding: 12px;">
+                        <div style="font-weight: 600; margin-bottom: 4px;">Test Competency Summary</div>
+                        <ul style="font-size: 13px; color: var(--text-secondary); padding-left: 20px; margin: 0;">
+                            <li>Core Professional Knowledge: Pass (82%)</li>
+                            <li>Destination Practice Orientation: Pass (78%)</li>
+                            <li>Ready for hire: <strong style="color: var(--success);">YES</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 style="margin-top: 20px; margin-bottom: 12px;">Employer Actions</h4>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                    <button class="btn btn-primary btn-block">Schedule Interview</button>
+                    <button class="btn btn-secondary btn-block">View Full Profile</button>
+                    <button class="btn btn-secondary btn-block">Send Job Offer</button>
+                    <button class="btn btn-secondary btn-block">Request References</button>
+                </div>
+
+                <div class="card" style="background: rgba(32, 141, 157, 0.05); margin-top: 20px;">
+                    <p style="font-size: 13px; color: var(--text-secondary);">
+                        <strong>🔒 Data Privacy:</strong> Hospital views only verified candidates. 
+                        All verification performed by MediLink with full audit trail. 
+                        No unverified profiles shown to hospitals.
+                    </p>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-block" onclick="switchTab(&#39;family&#39;)">
+                        ← Back to Family
+                    </button>
+                    <button class="btn btn-primary btn-block" onclick="restartAssessment()">
+                        🔄 Restart Assessment
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Destination data engine
+        const destinations = {
+            all: [
+                { name: 'USA', emoji: '🇺🇸', match: 95, salary: '$65,000-75,000/year', cost: '$25,000-35,000', pr: '3-5 years', exam: 'NCLEX-RN', timeline: '6-9 months', body: 'State Nursing Board', family: 'Excellent', complexity: 'Moderate', bottleneck: 'NCLEX seat availability' },
+                { name: 'UK', emoji: '🇬🇧', match: 88, salary: '£28,000-32,000/year', cost: '£18,000-24,000', pr: '5-10 years', exam: 'NMC Assessment + OSCE', timeline: '4-8 months', body: 'Nursing & Midwifery Council', family: 'Very Good', complexity: 'Moderate-High', bottleneck: 'OSCE centre capacity' },
+                { name: 'Australia', emoji: '🇦🇺', match: 92, salary: 'AUD $65,000-75,000/year', cost: 'AUD $28,000-38,000', pr: '3-4 years', exam: 'AHPRA Assessment', timeline: '3-6 months', body: 'AHPRA', family: 'Excellent', complexity: 'Straightforward', bottleneck: 'None (high demand)' },
+                { name: 'Canada', emoji: '🇨🇦', match: 85, salary: 'CAD $60,000-70,000/year', cost: 'CAD $25,000-35,000', pr: '2-3 years', exam: 'Provincial CNPU', timeline: '6-10 months', body: 'Provincial Nursing Colleges', family: 'Exceptional', complexity: 'Moderate', bottleneck: 'None (fast track)' },
+                { name: 'New Zealand', emoji: '🇳🇿', match: 90, salary: 'NZD $60,000-70,000/year', cost: 'NZD $25,000-32,000', pr: '2-3 years', exam: 'NZNO/HPCA', timeline: '4-6 months', body: 'HPRA', family: 'Exceptional', complexity: 'Straightforward', bottleneck: 'None (fast)' },
+                { name: 'Singapore', emoji: '🇸🇬', match: 87, salary: 'SGD $55,000-70,000/year', cost: 'SGD $24,000-32,000', pr: '3-5 years', exam: 'Singapore Nursing Board', timeline: '2-4 months', body: 'Ministry of Health', family: 'Very Good', complexity: 'Moderate', bottleneck: 'None (fastest)' },
+                { name: 'UAE', emoji: '🇦🇪', match: 83, salary: 'AED 120,000-150,000/year', cost: 'AED 30,000-40,000', pr: 'Long-term residency', exam: 'MOH License', timeline: '3-5 months', body: 'UAE Ministry of Health', family: 'Good', complexity: 'Moderate', bottleneck: 'License verification' },
+                { name: 'Germany', emoji: '🇩🇪', match: 80, salary: '€45,000-55,000/year', cost: '€20,000-28,000', pr: '3 years + EU path', exam: 'Approbation', timeline: '8-12 months', body: 'Bundesfachkammer', family: 'Good', complexity: 'High (language)', bottleneck: 'German language requirement' },
+                { name: 'Italy', emoji: '🇮🇹', match: 78, salary: '€35,000-45,000/year', cost: '€18,000-26,000', pr: '5+ years', exam: 'Italian License', timeline: '6-10 months', body: 'Italian Nursing Board', family: 'Good', complexity: 'High (language)', bottleneck: 'Italian language test' }
+            ],
+            nurse: ['USA', 'UK', 'Australia', 'Canada', 'New Zealand', 'Singapore', 'UAE', 'Germany', 'Italy'],
+            doctor: ['USA', 'UK', 'Canada', 'Australia', 'UAE', 'Germany'],
+            allied: ['USA', 'UK', 'Australia', 'Canada', 'Singapore']
+        };
+
+        // Documents required by profession × destination
+        const documentsRequired = {
+            'nurse-USA': [
+                { doc: 'Passport', status: 'Requested', desc: 'Valid for 6+ months' },
+                { doc: 'Nursing License', status: 'Requested', desc: 'Current registration proof' },
+                { doc: 'Experience/Recommendation Letters', status: 'Requested', desc: 'From last 2 employers' },
+                { doc: 'Degree Certificate', status: 'Requested', desc: 'Nursing degree' },
+                { doc: 'NCLEX Authorization Letter', status: 'Requested', desc: 'Required for USA nursing only' },
+                { doc: 'Language Test Results (IELTS/TOEFL/OET)', status: 'Requested', desc: 'If applicable' },
+                { doc: 'Curriculum Vitae', status: 'Requested', desc: 'Professional summary' },
+                { doc: 'Statement of Purpose', status: 'Requested', desc: 'Career goals (500-1000 words)' },
+                { doc: 'Medical Exam Report', status: 'Optional', desc: 'Required upon job offer' }
+            ],
+            'nurse-UK': [
+                { doc: 'Passport', status: 'Requested', desc: 'Valid for 6+ months' },
+                { doc: 'Nursing License', status: 'Requested', desc: 'Current registration proof' },
+                { doc: 'Experience/Recommendation Letters', status: 'Requested', desc: 'From last 2 employers' },
+                { doc: 'Degree Certificate', status: 'Requested', desc: 'Nursing degree' },
+                { doc: 'OSCE Preparation', status: 'Requested', desc: 'NMC OSCE exam booking' },
+                { doc: 'Language Test Results (IELTS/OET)', status: 'Requested', desc: 'IELTS 6.5+ or OET B+' },
+                { doc: 'Curriculum Vitae', status: 'Requested', desc: 'Professional summary' },
+                { doc: 'Statement of Purpose', status: 'Requested', desc: 'Career goals (500-1000 words)' }
+            ],
+            'doctor-USA': [
+                { doc: 'Passport', status: 'Requested', desc: 'Valid for 6+ months' },
+                { doc: 'Medical License', status: 'Requested', desc: 'Current registration proof' },
+                { doc: 'Medical Degree Certificate', status: 'Requested', desc: 'MD/MBBS/equivalent' },
+                { doc: 'USMLE Scores', status: 'Requested', desc: 'Steps 1, 2, 3 (if applicable)' },
+                { doc: 'ECFMG Certification', status: 'Requested', desc: 'Educational Commission certification' },
+                { doc: 'Experience Letters', status: 'Requested', desc: 'From last 3 employers' },
+                { doc: 'Language Test Results (IELTS/TOEFL)', status: 'Requested', desc: 'As applicable' },
+                { doc: 'Curriculum Vitae', status: 'Requested', desc: 'Professional summary' },
+                { doc: 'Statement of Purpose', status: 'Requested', desc: 'Clinical goals (500-1000 words)' },
+                { doc: 'CV Verification (WEB)', status: 'Requested', desc: 'World Education Services' },
+                { doc: 'Medical Exam Report', status: 'Optional', desc: 'Required upon offer' }
+            ],
+            'allied-USA': [
+                { doc: 'Passport', status: 'Requested', desc: 'Valid for 6+ months' },
+                { doc: 'Professional License', status: 'Requested', desc: 'Current registration proof' },
+                { doc: 'Degree Certificate', status: 'Requested', desc: 'Allied Health degree' },
+                { doc: 'Experience/Recommendation Letters', status: 'Requested', desc: 'From last 2 employers' },
+                { doc: 'Language Test Results (IELTS/TOEFL)', status: 'Requested', desc: 'If applicable' },
+                { doc: 'Curriculum Vitae', status: 'Requested', desc: 'Professional summary' },
+                { doc: 'Statement of Purpose', status: 'Requested', desc: 'Career goals (500-1000 words)' }
+            ]
+        };
+
+        // Default documents for any combination not specified
+        const defaultDocuments = [
+            { doc: 'Passport', status: 'Requested', desc: 'Valid travel document' },
+            { doc: 'Professional License', status: 'Requested', desc: 'Current registration' },
+            { doc: 'Degree Certificates', status: 'Requested', desc: 'Qualification credentials' },
+            { doc: 'Experience/Recommendation Letters', status: 'Requested', desc: 'From employers' },
+            { doc: 'Language Test Results (IELTS/TOEFL/OET)', status: 'Requested', desc: 'As applicable' },
+            { doc: 'Curriculum Vitae', status: 'Requested', desc: 'Professional CV' },
+            { doc: 'Statement of Purpose', status: 'Requested', desc: 'Career goals (500-1000 words)' }
+        ];
+
+        // State management
+        const state = {
+            currentTab: 'assessment',
+            caseId: 'CASE-' + Date.now(),
+            userProfile: {
+                name: 'Dr. Priya Sharma',
+                email: 'priya@example.com',
+                profession: 'nurse',
+                experience: 8,
+                english: 'advanced',
+                location: 'India',
+                family: 'married-no-kids',
+                migrationTimeline: '6m'
+            },
+            caseStatus: 'AssessmentOnly',
+            selectedDestinations: ['USA', 'Australia', 'Canada'],
+            documents: [],
+            gatewayStatus: {
+                docs: 'completed',
+                interview: 'completed',
+                test: 'pending'
+            }
+        };
+
+        // Mandatory fields validation
+        const mandatoryFields = {
+            'assessment': ['name', 'email', 'profession', 'experience', 'englishTest', 'englishScore', 'family', 'migrationTimeline']
+        };
+
+        function validateForm(tabName) {
+            const fields = mandatoryFields[tabName];
+            if (!fields) return true;
+            
+            const missingFields = [];
+            fields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (!field || !field.value || field.value.trim() === '') {
+                    missingFields.push(fieldId);
+                }
+            });
+            
+            if (missingFields.length > 0) {
+                const fieldNames = {
+                    'name': 'Full Name',
+                    'email': 'Email Address',
+                    'profession': 'Profession',
+                    'experience': 'Years of Experience',
+                    'englishTest': 'English Test Type',
+                    'englishScore': 'English Score/Band',
+                    'family': 'Family Status',
+                    'migrationTimeline': 'Migration Timeline',
+                    'postSpecialty': 'Post-Specialty Training Status'
+                };
+                
+                const names = missingFields.map(f => fieldNames[f] || f).join(', ');
+                alert('❌ Please fill in all required fields:\n\n' + names);
+                return false;
+            }
+            
+            return true;
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+            
+            const tabEl = document.getElementById(tabName);
+            if (tabEl) {
+                tabEl.classList.add('active');
+            }
+            
+            // Find and activate the corresponding nav tab
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => {
+                if (tab.textContent.includes(['Assessment', 'Destinations', 'My Case', 'Documents', 'Test', 'Interview', 'Quality Gate', 'Matching', 'Family', 'Employer View'][
+                    ['assessment', 'destinations', 'case', 'documents', 'test', 'interview', 'gateway', 'matching', 'family', 'employer'].indexOf(tabName)
+                ])) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            state.currentTab = tabName;
+            updatePageHeader(tabName);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updatePageHeader(tabName) {
+            const headers = {
+                'assessment': { title: '📋 Professional Profile Assessment', desc: 'Step 1 of 10 - Complete your profile to get personalized destination recommendations' },
+                'destinations': { title: '🌍 Recommended Destinations', desc: 'Step 2 of 10 - Choose your top 3 destinations to match with hospitals and employers' },
+                'case': { title: '📁 My Migration Case', desc: 'Step 3 of 10 - Review your selections and activate your case' },
+                'documents': { title: '📋 Document Vault & Verification', desc: 'Step 4 of 10 - Upload profession and destination-specific documents' },
+                'test': { title: '📝 MediLink Professional Test', desc: 'Step 5 of 10 - Demonstrate professional competency' },
+                'interview': { title: '🎤 Structured Interview', desc: 'Step 6 of 10 - Interview assessment results' },
+                'gateway': { title: '🎯 MediLink Quality Gateway', desc: 'Step 7 of 10 - Complete verification steps to become MediLink Verified' },
+                'matching': { title: '🏥 Hospital Matching & Employer Interviews', desc: 'Step 8 of 10 - View hospital matches and interview opportunities' },
+                'family': { title: '👨‍👩‍👧 Family & Settlement Support (FCSP)', desc: 'Step 9 of 10 - Post-placement support for smooth relocation' },
+                'employer': { title: '👔 Employer Portal (Read-Only Demo)', desc: 'Step 10 of 10 - How hospitals view verified candidates' }
+            };
+            
+            const header = headers[tabName];
+            const pageHeader = document.getElementById('pageHeader');
+            const heroSection = document.getElementById('heroSection');
+            
+            if (tabName === 'assessment') {
+                // Assessment page: show hero, hide pageHeader
+                heroSection.style.display = 'block';
+                pageHeader.style.display = 'none';
+            } else {
+                // All other pages: hide hero, show dynamic pageHeader
+                heroSection.style.display = 'none';
+                pageHeader.style.display = 'block';
+                pageHeader.innerHTML = `<h2>${header.title}</h2><p>${header.desc}</p>`;
+            }
+        }
+
+        // Assessment flow
+        function startAssessment() {
+            switchTab('assessment');
+            document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function validateAndProceed() {
+            if (validateForm('assessment')) {
+                state.userProfile.name = document.getElementById('name').value;
+                state.userProfile.email = document.getElementById('email').value;
+                state.userProfile.profession = document.getElementById('profession').value;
+                state.userProfile.experience = document.getElementById('experience').value;
+                state.userProfile.migrationTimeline = document.getElementById('migrationTimeline').value;
+                state.caseStatus = 'AssessmentComplete';
+                
+                // Generate destination list for this profession
+                renderDestinations();
+                switchTab('destinations');
+            }
+        }
+
+        // Render destinations based on profession
+        function renderDestinations() {
+            const profession = state.userProfile.profession;
+            const allowedDests = destinations[profession] || destinations.nurse;
+            const grid = document.getElementById('destinationGrid');
+            
+            grid.innerHTML = '';
+            allowedDests.forEach(destName => {
+                const destObj = destinations.all.find(d => d.name === destName);
+                if (destObj) {
+                    const isSelected = state.selectedDestinations.includes(destName);
+                    const card = document.createElement('div');
+                    card.className = `destination-card ${isSelected ? 'selected' : ''}`;
+                    card.setAttribute('data-destination', destName);
+                    card.onclick = () => toggleDestinationSelection(card, destName);
+                    
+                    card.innerHTML = `
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <div class="destination-name">${destObj.emoji} ${destName}</div>
+                            <input type="checkbox" class="dest-checkbox" data-destination="${destName}" ${isSelected ? 'checked' : ''} style="width: 20px; height: 20px; cursor: pointer;">
+                        </div>
+                        <div class="destination-stat">
+                            <span>Match Score:</span>
+                            <strong class="match-score">${destObj.match}% 🎯</strong>
+                        </div>
+                        <div class="score-bar">
+                            <div class="score-fill" style="width: ${destObj.match}%"></div>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Avg Salary:</span>
+                            <strong>${destObj.salary}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Cost of Living (Annual):</span>
+                            <strong>${destObj.cost}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>PR Timeline:</span>
+                            <strong>${destObj.pr}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Key Exam:</span>
+                            <strong>${destObj.exam}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Timeline to First Job:</span>
+                            <strong>${destObj.timeline}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Registration Body:</span>
+                            <strong>${destObj.body}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Family-Friendliness:</span>
+                            <strong style="color: var(--success);">⭐⭐⭐⭐⭐ ${destObj.family}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Licensing Complexity:</span>
+                            <strong>⚙️ ${destObj.complexity}</strong>
+                        </div>
+                        <div class="destination-stat">
+                            <span>Bottleneck:</span>
+                            <strong style="color: var(--warning);">${destObj.bottleneck}</strong>
+                        </div>
+                        <button class="btn btn-primary btn-small btn-block" style="margin-top: 12px;" onclick="showLanguageCalculator('${destName}'); return false;">💬 Language Learning Info</button>
+                    `;
+                    grid.appendChild(card);
+                }
+            });
+            updateDestinationCount();
+        }
+
+        // Destination selection (checkbox-based)
+        function toggleDestinationSelection(element, destination) {
+            const checkbox = element.querySelector('.dest-checkbox');
+            const isSelected = element.classList.contains('selected');
+            
+            if (isSelected) {
+                element.classList.remove('selected');
+                checkbox.checked = false;
+                const idx = state.selectedDestinations.indexOf(destination);
+                if (idx > -1) state.selectedDestinations.splice(idx, 1);
+            } else {
+                element.classList.add('selected');
+                checkbox.checked = true;
+                if (!state.selectedDestinations.includes(destination)) {
+                    state.selectedDestinations.push(destination);
+                }
+            }
+            
+            updateDestinationCount();
+        }
+
+        function updateDestinationCount() {
+            const selected = document.querySelectorAll('.destination-card.selected').length;
+            document.getElementById('destCount').innerText = `Selected: ${selected}/3`;
+            
+            const proceedBtn = document.querySelector('button[onclick="proceedWithSelectedDestinations(); switchTab(\'case\');"]');
+            
+            if (selected === 3 && proceedBtn) {
+                proceedBtn.disabled = false;
+                proceedBtn.title = 'Ready to proceed';
+            } else if (proceedBtn) {
+                proceedBtn.disabled = true;
+                proceedBtn.title = `Select 3 destinations to continue (${selected}/3 selected)`;
+            }
+        }
+
+        function proceedWithSelectedDestinations() {
+            // Update case page badges
+            const badgesHtml = state.selectedDestinations.map(dest => 
+                `<span class="badge badge-verified">${dest}</span>`
+            ).join('');
+            document.getElementById('caseDestinationBadges').innerHTML = badgesHtml;
+            
+            // Update documents dropdown to show only selected destinations
+            const docDestSelect = document.getElementById('docDestination');
+            docDestSelect.innerHTML = '';
+            state.selectedDestinations.forEach(dest => {
+                const option = document.createElement('option');
+                option.value = dest;
+                option.textContent = dest;
+                docDestSelect.appendChild(option);
+            });
+            
+            // Set first selected destination as default
+            if (state.selectedDestinations.length > 0) {
+                docDestSelect.value = state.selectedDestinations[0];
+            }
+            
+            // Update document checklist for new destination
+            updateDocumentChecklist();
+        }
+
+        // Case management
+        function downloadReport() {
+            const report = `
+MEDILINK ASSESSMENT REPORT
+==========================
+
+Name: ${state.userProfile.name}
+Profession: ${state.userProfile.profession}
+Experience: ${state.userProfile.experience} years
+Assessment Date: ${new Date().toLocaleDateString()}
+
+TOP RECOMMENDED DESTINATIONS:
+${state.selectedDestinations.map((d, i) => `${i+1}. ${d}`).join('\n')}
+
+MIGRATION TIMELINE: ${state.userProfile.migrationTimeline}
+
+NEXT STEPS:
+1. Activate case with ₹5,000 placement bond
+2. Upload documents for verification
+3. Complete interview and test
+4. Receive MediLink Verified badge
+5. View employer matches
+
+Report Generated: ${new Date().toLocaleString()}
+            `;
+            
+            const blob = new Blob([report], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'MediLink_Assessment_Report.txt';
+            a.click();
+        }
+
+        function paymentFlow() {
+            state.caseStatus = 'CaseOpened';
+            alert('✓ Payment simulated. Bond activated!\n\nYour ₹5,000 placement bond is confirmed.\nYou can now upload documents for verification.');
+            switchTab('documents');
+        }
+
+        // Test submission
+        function submitTest() {
+            state.caseStatus = 'TestPassed';
+            alert('✓ Test submitted successfully!\n\nYour scores:\n- Part A: 82%\n- Part B: 78%\nPASS ✓\n\nYou are now MediLink Verified!');
+            switchTab('gateway');
+        }
+
+        // Login simulation
+        function simulateLogin() {
+            const userStatus = document.getElementById('userStatus');
+            if (userStatus.innerText === 'Not logged in') {
+                userStatus.innerText = '👤 Priya Sharma (Verified)';
+                alert('Login successful! Welcome back, Priya.');
+            } else {
+                userStatus.innerText = 'Not logged in';
+            }
+        }
+
+        // Update profession fields
+        function updateProfessionFields() {
+            const specialty = document.getElementById('postSpecialty');
+            specialty.value = '';
+            updateSpecialtyField();
+        }
+
+        function updateSpecialtyField() {
+            const postSpecialty = document.getElementById('postSpecialty').value;
+            const specialtyField = document.getElementById('specialtyField');
+            if (postSpecialty === 'yes') {
+                specialtyField.style.display = 'block';
+                document.getElementById('specialty').required = true;
+            } else {
+                specialtyField.style.display = 'none';
+                document.getElementById('specialty').required = false;
+            }
+        }
+
+        // Update English test label
+        document.addEventListener('DOMContentLoaded', function() {
+            const englishTest = document.getElementById('englishTest');
+            if (englishTest) {
+                englishTest.addEventListener('change', function() {
+                    const label = document.getElementById('englishScoreLabel');
+                    const input = document.getElementById('englishScore');
+                    const value = this.value;
+                    
+                    if (value === 'ielts') {
+                        label.textContent = 'IELTS Score (e.g., 7.0)';
+                        input.placeholder = 'e.g., 7.0';
+                    } else if (value === 'oet') {
+                        label.textContent = 'OET Band (e.g., B+)';
+                        input.placeholder = 'e.g., B+';
+                    } else if (value === 'toefl') {
+                        label.textContent = 'TOEFL Score (e.g., 100)';
+                        input.placeholder = 'e.g., 100';
+                    } else if (value === 'native') {
+                        label.textContent = 'Proficiency Level';
+                        input.placeholder = 'Native / Fluent';
+                    }
+                });
+            }
+            
+            // Initialize destination grid
+            renderDestinations();
+            updateDocumentChecklist();
+        });
+
+        // Update document checklist (dynamic by profession × destination)
+        function updateDocumentChecklist() {
+            const profession = document.getElementById('docProfession').value;
+            const destination = document.getElementById('docDestination').value;
+            const key = profession + '-' + destination;
+            const docs = documentsRequired[key] || defaultDocuments;
+            
+            const checklist = document.getElementById('docChecklist');
+            checklist.innerHTML = '';
+            
+            docs.forEach((doc, idx) => {
+                const item = document.createElement('div');
+                item.className = 'doc-item';
+                item.innerHTML = `
+                    <input type="checkbox" class="doc-checkbox">
+                    <span><strong>${doc.doc}</strong> - ${doc.desc}</span>
+                    <span class="doc-status status-${doc.status.toLowerCase()}">${doc.status}</span>
+                    <button class="btn btn-small btn-secondary">Upload</button>
+                `;
+                checklist.appendChild(item);
+            });
+            
+            // Add progress tracking
+            document.addEventListener('change', function(e) {
+                if (e.target.classList.contains('doc-checkbox')) {
+                    const total = checklist.querySelectorAll('.doc-checkbox').length;
+                    const checked = checklist.querySelectorAll('.doc-checkbox:checked').length;
+                    const progress = Math.round((checked / total) * 100);
+                    
+                    document.getElementById('docProgress').innerText = progress + '%';
+                    document.getElementById('docProgressBar').style.width = progress + '%';
+                }
+            });
+        }
+
+        // Show Terms & Conditions modal
+        function showTermsModal() {
+            alert(`📋 TERMS & CONDITIONS\n\nMediLink Ethical Recruitment Platform\n\n` +
+                `1. SERVICE TERMS\n` +
+                `- MediLink provides ethical placement services without worker fees\n` +
+                `- All costs are covered by hospitals/employers\n` +
+                `- ₹5,000 refundable placement bond required to activate case\n\n` +
+                `2. ETHICAL COMMITMENT\n` +
+                `- Zero debt bondage\n` +
+                `- Fair, transparent contracts\n` +
+                `- 24/7 grievance support\n` +
+                `- WHO Global Code compliant\n\n` +
+                `3. DATA & PRIVACY\n` +
+                `- Your data is encrypted and secure\n` +
+                `- Not shared with unauthorized parties\n` +
+                `- Full control over information visibility\n\n` +
+                `4. LIABILITY\n` +
+                `- MediLink acts as intermediary\n` +
+                `- Final employment decisions by hospitals\n` +
+                `- Disputes resolved per local regulations\n\n` +
+                `5. REFUND POLICY\n` +
+                `- Bond refunded on successful placement\n` +
+                `- Or after 12 months of continued support\n` +
+                `- Full transparency on all deductions\n\n` +
+                `By checking this box, you agree to all above terms.`);
+        }
+
+        // Show language calculator modal
+        function showLanguageCalculator(destination) {
+            const languages = {
+                'USA': { language: 'None required', months: 0, cost: 0, info: 'English proficiency sufficient for most candidates' },
+                'UK': { language: 'None (English)', months: 0, cost: 0, info: 'IELTS 6.5+ or OET B+ may be required for visa' },
+                'Australia': { language: 'None (English)', months: 0, cost: 0, info: 'IELTS 7.0 or OET B+ required for skilled visa' },
+                'Canada': { language: 'None (English)', months: 0, cost: 0, info: 'CLB 9 English proficiency required via IELTS/CELPIP (avg 2-3 months)' },
+                'NewZealand': { language: 'None (English)', months: 0, cost: 0, info: 'IELTS 6.5 or OET B required for registration' },
+                'Singapore': { language: 'None (English)', months: 0, cost: 0, info: 'English fluency required (no language test needed if trained in English)' },
+                'UAE': { language: 'None required', months: 0, cost: 0, info: 'English proficiency sufficient' },
+                'Germany': { language: 'German', months: 6, cost: 10000, info: 'B2 German language required (6-12 months study recommended)' },
+                'Italy': { language: 'Italian', months: 6, cost: 8000, info: 'B2 Italian language required (6-12 months study recommended)' }
+            };
+            
+            const lang = languages[destination];
+            alert(`📚 Language Requirements for ${destination}\n\n` +
+                `Primary Language: ${lang.language}\n` +
+                `Study Duration (if needed): ${lang.months > 0 ? lang.months + ' months' : 'Not required'}\n` +
+                `Estimated Cost: ${lang.cost > 0 ? '₹' + lang.cost + ' / USD$' + (lang.cost/100).toFixed(0) : 'Minimal/None'}\n\n` +
+                `Details: ${lang.info}\n\n` +
+                `Contact MediLink support for customized language pathway.`);
+        }
+
+        // Show agency comparison modal
+        function showAgencyComparison() {
+            alert(`📊 TRADITIONAL RECRUITMENT AGENCY vs MEDILINK COMPARISON\n\n` +
+                `═══════════════════════════════════════════════════════════════\n\n` +
+                `TRADITIONAL RECRUITMENT AGENCY:\n` +
+                `├─ Placement Fee: ₹2,50,000 - ₹3,50,000 UPFRONT\n` +
+                `├─ Timeline: 12-18 months (slow)\n` +
+                `├─ Hidden Costs: YES (travel, visa, insurance often extra)\n` +
+                `├─ Salary Deductions: YES (6-12 months salary cuts)\n` +
+                `├─ Debt Incurred: YES (high-interest loans, salary bondage)\n` +
+                `├─ Contract Review: Limited or none\n` +
+                `├─ Post-Placement Support: Minimal (abandoned after hire)\n` +
+                `├─ Grievance Channel: Not standardized\n` +
+                `└─ Exploitation Risk: HIGH (debt traps, contract violations)\n\n` +
+                `═══════════════════════════════════════════════════════════════\n\n` +
+                `MEDILINK (Ethical Platform):\n` +
+                `├─ Placement Bond: ₹5,000 REFUNDABLE on placement\n` +
+                `├─ Timeline: 6-12 months (faster)\n` +
+                `├─ Hidden Costs: ZERO (fully transparent breakdown)\n` +
+                `├─ Salary Deductions: NEVER (guaranteed in writing)\n` +
+                `├─ Debt Incurred: ZERO (no loans, employer-paid)\n` +
+                `├─ Contract Review: MANDATORY (fairness checks)\n` +
+                `├─ Post-Placement Support: 90-day FCSP + ongoing\n` +
+                `├─ Grievance Channel: 24/7 dedicated support\n` +
+                `└─ Ethical Standards: WHO Global Code compliant\n\n` +
+                `═══════════════════════════════════════════════════════════════\n\n` +
+                `💰 FINANCIAL IMPACT:\n` +
+                `Traditional Agency Total Cost: ₹2,50,000-3,50,000 + salary cuts\n` +
+                `MediLink Total Cost: ₹5,000 (REFUNDABLE)\n` +
+                `YOUR SAVINGS: ₹2,45,000 - ₹3,45,000 +  no salary cuts`);
+        }
+
+        // Drag-to-reorder functionality
+        let draggedElement = null;
+
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.classList.contains('priority-item')) {
+                draggedElement = e.target;
+                e.dataTransfer.effectAllowed = 'move';
+            }
+        });
+
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+        });
+
+        document.addEventListener('drop', function(e) {
+            e.preventDefault();
+            if (draggedElement && e.target.classList.contains('priority-item')) {
+                const parent = draggedElement.parentNode;
+                parent.insertBefore(draggedElement, e.target);
+            }
+        });
+
+        // Restart assessment flow
+        function restartAssessment() {
+            if (confirm('🔄 Are you sure you want to restart? This will clear all your data and start from the beginning.')) {
+                // Clear all form fields
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('profession').value = '';
+                document.getElementById('postSpecialty').value = '';
+                document.getElementById('experience').value = '';
+                document.getElementById('englishTest').value = '';
+                document.getElementById('englishScore').value = '';
+                document.getElementById('family').value = '';
+                document.getElementById('migrationTimeline').value = '';
+                document.getElementById('specialty').style.display = 'none';
+                document.getElementById('tcCheckbox').checked = false;
+                
+                // Reset state
+                state.caseStatus = 'AssessmentOnly';
+                state.selectedDestinations = [];
+                
+                // Go back to assessment
+                switchTab('assessment');
+                alert('✓ Assessment restarted. You can now start fresh.');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Initialize
+        window.addEventListener('load', function() {
+            console.log('MediLink v4 - Fully Functional');
+            console.log('Case ID:', state.caseId);
+            
+            // Set initial destination count
+            updateDestinationCount();
+            
+            // Trigger initial English test label update
+            const englishTest = document.getElementById('englishTest');
+            if (englishTest && englishTest.value) {
+                englishTest.dispatchEvent(new Event('change'));
+            }
+        });
+    </script>
+
+
+</body></html>
