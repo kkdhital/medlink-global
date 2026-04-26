@@ -197,11 +197,11 @@ MEDLINK Global is a transparent healthcare workforce migration platform serving 
 ## 📧 **Contact**
 
 **EVOX Medical Ltd**
-- Email: info@medlinkglobal.com
+- Email: info@evoxmedical.com
 - Web: [To be deployed]
 - GitHub: [This repository]
 
-**Founder:** Hari (EVOX Medical Ltd)
+**Founder:** Hari D (EVOX Medical Ltd)
 - Location: Chennai, India / London, UK operations
 - Registration: UK-registered company
 
